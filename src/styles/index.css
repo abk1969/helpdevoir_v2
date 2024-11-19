@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-200;
+  }
+}
+
+.font-dyslexic {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+
+/* Styles spécifiques pour le mode dyslexie */
+.dyslexia-mode {
+  --background-color: #f5f5dc;
+  --text-color: #333;
+  --line-height: 1.8;
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: var(--line-height);
+}
+
+.dyslexia-mode h1,
+.dyslexia-mode h2,
+.dyslexia-mode h3 {
+  margin-bottom: 1.2em;
+}
+
+.dyslexia-mode p {
+  margin-bottom: 1.5em;
+}
+
+/* Amélioration de la lisibilité des liens */
+.dyslexia-mode a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
